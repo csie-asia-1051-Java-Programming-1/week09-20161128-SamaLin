@@ -10,14 +10,14 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+//import java.util.Comparator;
 public class ex02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn=new Scanner(System.in);
 		ArrayList<ex02_student> studList=new ArrayList<ex02_student>();
-		boolean flag=true;
+//		boolean flag=true;
 //		int a=scn.nextInt();
 //		studList.add(new ex02_student(scn.next(),scn.next(),scn.nextInt(),scn.nextInt(),scn.nextInt()));
 //		studList.add(new ex02_student(scn.next(),scn.next(),scn.nextInt(),scn.nextInt(),scn.nextInt()));
@@ -25,9 +25,20 @@ public class ex02 {
 //		studList.get(0).getavg();
 //		studList.get(1).getavg();
 //		studList.get(2).getavg();
+		
 		studList.add(new ex02_student("a","01",10,20,30));
 		studList.add(new ex02_student("b","02",15,30,40));
 		studList.add(new ex02_student("c","03",5,10,20));
+		String flag="Y";
+		while(true){
+			System.out.println("請輸入學生 ID 學號 姓名 國文 英文 數學");
+			studList.add(new ex02_student(scn.next(),scn.next(),scn.nextInt(),scn.nextInt(),scn.nextInt()));
+			System.out.println("是否繼續輸入");
+			flag =scn.next();
+			if(flag=="N"||flag=="n"){
+				break;
+			};
+		}
 //		float data[]=new float [studList.size()];
 		ArrayList<Float> data = new ArrayList<Float>();
 		for(int i=0;i<studList.size();i++){
