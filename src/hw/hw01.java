@@ -16,19 +16,30 @@ public class hw01 {
 		while(true){
 			for(int i=1;i<a;i++){
 				sum=0;
-				for(int j=1;j<a;j++){
+				for(int j=i;j<a;j++){
 					sum=sum+j;
-					if(sum==a){
-						System.out.print("=");
-						for(int k=i;k<=j;k++){
-							System.out.print(k+"+");
-						}
-						System.out.print(" ");
-						break;
-					}
+//					if(sum==a){System.out.println(i+"/"+j);}
+					if(sum==a){fun(i,j);}
 				}
 			}
+//			for(int i=1;i<a;i++){
+//				for(int j=1;j<=i;j++){
+//					sum=sum+j;
+//				}
+//			}
+			break;
 		}
+	}
+	
+	public static void fun(int v1,int v2){
+		for(int i=v1;i<=v2;i++){
+			if(i==v1){
+				System.out.print(i);
+			}else{
+				System.out.print("+"+i);
+			}
+		}
+		System.out.print("\n");
 	}
 
 }
